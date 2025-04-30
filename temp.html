@@ -1,0 +1,1074 @@
+
+<html class="">
+              
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+      window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest', // Options: 'nest', 'remove', 'replace'
+      };
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    
+<style>
+  * {
+    font-family: "Inter", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
+</style>
+
+    
+<style>
+  .highlighted-section {
+    outline: 2px solid #3F20FB;
+    background-color: rgba(63, 32, 251, 0.1);
+  }
+
+  .edit-button {
+    position: absolute;
+    z-index: 1000;
+  }
+</style>
+
+    
+<style>
+   :root {
+          /* Base colors */
+          --color-base: #ffffff;
+          --color-base-50: #f9fafb;
+          --color-base-100: #f3f4f6;
+          --color-base-200: #e5e7eb;
+          --color-base-300: #d1d5db;
+          --color-base-400: #9ca3af;
+          --color-base-500: #6b7280;
+          --color-base-600: #4b5563;  
+          --color-base-700: #374151;
+          --color-base-800: #1f2937;  
+          --color-base-900: #111827;
+          --color-base-content: #1f2937;
+
+          /* Primary colors */
+          --color-primary: #3b82f6;
+          --color-primary-50: #eff6ff;
+          --color-primary-100: #dbeafe;
+          --color-primary-200: #bfdbfe;
+          --color-primary-300: #93c5fd;
+          --color-primary-400: #60a5fa;
+          --color-primary-500: #3b82f6;
+          --color-primary-600: #2563eb;
+          --color-primary-700: #1d4ed8;
+          --color-primary-800: #1e40af;
+          --color-primary-900: #1e3a8a;
+          --color-primary-focus: #2563eb;
+          --color-primary-content: #ffffff;
+
+          /* Secondary colors */
+          --color-secondary: #8b5cf6;
+          --color-secondary-50: #f5f3ff;
+          --color-secondary-100: #ede9fe;
+          --color-secondary-200: #ddd6fe;
+          --color-secondary-300: #c4b5fd;
+          --color-secondary-400: #a78bfa;
+          --color-secondary-500: #8b5cf6;
+          --color-secondary-600: #7c3aed;
+          --color-secondary-700: #6d28d9;
+          --color-secondary-800: #5b21b6;
+          --color-secondary-900: #4c1d95;
+          --color-secondary-focus: #7c3aed;
+          --color-secondary-content: #ffffff;
+
+          /* Accent colors */
+          --color-accent: #f472b6;
+          --color-accent-50: #fdf2f8;
+          --color-accent-100: #fce7f3;
+          --color-accent-200: #fbcfe8;
+          --color-accent-300: #f9a8d4;
+          --color-accent-400: #f472b6;
+          --color-accent-500: #ec4899;
+          --color-accent-600: #db2777;
+          --color-accent-700: #be185d;
+          --color-accent-800: #9d174d;
+          --color-accent-900: #831843;
+          --color-accent-focus: #db2777;
+          --color-accent-content: #ffffff;
+
+          /* Neutral colors */
+          --color-neutral: #6b7280;
+          --color-neutral-50: #f9fafb;
+          --color-neutral-100: #f3f4f6;
+          --color-neutral-200: #e5e7eb;
+          --color-neutral-300: #d1d5db;
+          --color-neutral-400: #9ca3af;
+          --color-neutral-500: #6b7280;
+          --color-neutral-600: #4b5563;
+          --color-neutral-700: #374151;
+          --color-neutral-800: #1f2937;
+          --color-neutral-900: #111827;
+          --color-neutral-focus: #4b5563;
+          --color-neutral-content: #ffffff;
+
+          /* Info colors */
+          --color-info: #3b82f6;
+          --color-info-50: #eff6ff;
+          --color-info-100: #dbeafe;
+          --color-info-200: #bfdbfe;
+          --color-info-300: #93c5fd;
+          --color-info-400: #60a5fa;
+          --color-info-500: #3b82f6;
+          --color-info-600: #2563eb;
+          --color-info-700: #1d4ed8;
+          --color-info-800: #1e40af;
+          --color-info-900: #1e3a8a;
+          --color-info-focus: #2563eb;
+          --color-info-content: #ffffff;
+
+          /* Success colors */
+          --color-success: #10b981;
+          --color-success-50: #ecfdf5;
+          --color-success-100: #d1fae5;
+          --color-success-200: #a7f3d0;
+          --color-success-300: #6ee7b7;
+          --color-success-400: #34d399;
+          --color-success-500: #10b981;
+          --color-success-600: #059669;
+          --color-success-700: #047857;
+          --color-success-800: #065f46;
+          --color-success-900: #064e3b;
+          --color-success-focus: #059669;
+          --color-success-content: #ffffff;
+
+          /* Warning colors */
+          --color-warning: #f59e0b;
+          --color-warning-50: #fffbeb;
+          --color-warning-100: #fef3c7;
+          --color-warning-200: #fde68a;
+          --color-warning-300: #fcd34d;
+          --color-warning-400: #fbbf24;
+          --color-warning-500: #f59e0b;
+          --color-warning-600: #d97706;
+          --color-warning-700: #b45309;
+          --color-warning-800: #92400e;
+          --color-warning-900: #78350f;
+          --color-warning-focus: #d97706;
+          --color-warning-content: #ffffff;
+
+          /* Error colors */
+          --color-error: #ef4444;
+          --color-error-50: #fef2f2;
+          --color-error-100: #fee2e2;
+          --color-error-200: #fecaca;
+          --color-error-300: #fca5a5;
+          --color-error-400: #f87171;
+          --color-error-500: #ef4444;
+          --color-error-600: #dc2626;
+          --color-error-700: #b91c1c;
+          --color-error-800: #991b1b;
+          --color-error-900: #7f1d1d;
+          --color-error-focus: #dc2626;
+          --color-error-content: #ffffff;
+        }
+</style>
+
+    
+<style>
+/* Dark theme */
+        .dark {
+          /* Base colors */
+          --color-base: #1f2937;
+          --color-base-50: #111827;
+          --color-base-100: #1f2937;
+          --color-base-200: #374151;
+          --color-base-300: #4b5563;
+          --color-base-400: #6b7280;
+          --color-base-500: #9ca3af;
+          --color-base-600: #d1d5db;
+          --color-base-700: #e5e7eb;
+          --color-base-800: #f3f4f6;
+          --color-base-900: #f9fafb;
+          --color-base-content: #f9fafb;
+
+          /* Primary colors */
+          --color-primary: #60a5fa;
+          --color-primary-50: #1e3a8a;
+          --color-primary-100: #1e40af;
+          --color-primary-200: #1d4ed8;
+          --color-primary-300: #2563eb;
+          --color-primary-400: #3b82f6;
+          --color-primary-500: #60a5fa;
+          --color-primary-600: #93c5fd;
+          --color-primary-700: #bfdbfe;
+          --color-primary-800: #dbeafe;
+          --color-primary-900: #eff6ff;
+          --color-primary-focus: #3b82f6;
+          --color-primary-content: #1f2937;
+
+          /* Secondary colors */
+          --color-secondary: #a78bfa;
+          --color-secondary-50: #4c1d95;
+          --color-secondary-100: #5b21b6;
+          --color-secondary-200: #6d28d9;
+          --color-secondary-300: #7c3aed;
+          --color-secondary-400: #8b5cf6;
+          --color-secondary-500: #a78bfa;
+          --color-secondary-600: #c4b5fd;
+          --color-secondary-700: #ddd6fe;
+          --color-secondary-800: #ede9fe;
+          --color-secondary-900: #f5f3ff;
+          --color-secondary-focus: #8b5cf6;
+          --color-secondary-content: #1f2937;
+
+          /* Accent colors */
+          --color-accent: #f472b6;
+          --color-accent-50: #831843;
+          --color-accent-100: #9d174d;
+          --color-accent-200: #be185d;
+          --color-accent-300: #db2777;
+          --color-accent-400: #ec4899;
+          --color-accent-500: #f472b6;
+          --color-accent-600: #f9a8d4;
+          --color-accent-700: #fbcfe8;
+          --color-accent-800: #fce7f3;
+          --color-accent-900: #fdf2f8;
+          --color-accent-focus: #ec4899;
+          --color-accent-content: #1f2937;
+
+          /* Neutral colors remain the same as light theme */
+
+          /* Info colors */
+          --color-info: #60a5fa;
+          --color-info-50: #1e3a8a;
+          --color-info-100: #1e40af;
+          --color-info-200: #1d4ed8;
+          --color-info-300: #2563eb;
+          --color-info-400: #3b82f6;
+          --color-info-500: #60a5fa;
+          --color-info-600: #93c5fd;
+          --color-info-700: #bfdbfe;
+          --color-info-800: #dbeafe;
+          --color-info-900: #eff6ff;
+          --color-info-focus: #3b82f6;
+          --color-info-content: #1f2937;
+
+          /* Success colors */
+          --color-success: #34d399;
+          --color-success-50: #064e3b;
+          --color-success-100: #065f46;
+          --color-success-200: #047857;
+          --color-success-300: #059669;
+          --color-success-400: #10b981;
+          --color-success-500: #34d399;
+          --color-success-600: #6ee7b7;
+          --color-success-700: #a7f3d0;
+          --color-success-800: #d1fae5;
+          --color-success-900: #ecfdf5;
+          --color-success-focus: #10b981;
+          --color-success-content: #1f2937;
+
+          /* Warning colors */
+          --color-warning: #fbbf24;
+          --color-warning-50: #78350f;
+          --color-warning-100: #92400e;
+          --color-warning-200: #b45309;
+          --color-warning-300: #d97706;
+          --color-warning-400: #f59e0b;
+          --color-warning-500: #fbbf24;
+          --color-warning-600: #fcd34d;
+          --color-warning-700: #fde68a;
+          --color-warning-800: #fef3c7;
+          --color-warning-900: #fffbeb;
+          --color-warning-focus: #f59e0b;
+          --color-warning-content: #1f2937;
+
+          /* Error colors */
+          --color-error: #f87171;
+          --color-error-50: #7f1d1d;
+          --color-error-100: #991b1b;
+          --color-error-200: #b91c1c;
+          --color-error-300: #dc2626;
+          --color-error-400: #ef4444;
+          --color-error-500: #f87171;
+          --color-error-600: #fca5a5;
+          --color-error-700: #fecaca;
+          --color-error-800: #fee2e2;
+          --color-error-900: #fef2f2;
+          --color-error-focus: #ef4444;
+          --color-error-content: #1f2937;
+        }
+</style>
+
+    
+  <script>
+        tailwind.config = {
+            theme: {
+              extend: {
+                colors: {
+                ...{"transparent":"transparent","current":"currentColor","black":"#000000","white":"#ffffff","gray":{"50":"#f9fafb","100":"#f3f4f6","200":"#e5e7eb","300":"#d1d5db","400":"#9ca3af","500":"#6b7280","600":"#4b5563","700":"#374151","800":"#1f2937","900":"#111827"},"red":{"50":"#fef2f2","100":"#fee2e2","200":"#fecaca","300":"#fca5a5","400":"#f87171","500":"#ef4444","600":"#dc2626","700":"#b91c1c","800":"#991b1b","900":"#7f1d1d"},"yellow":{"50":"#fffbeb","100":"#fef3c7","200":"#fde68a","300":"#fcd34d","400":"#fbbf24","500":"#f59e0b","600":"#d97706","700":"#b45309","800":"#92400e","900":"#78350f"},"green":{"50":"#ecfdf5","100":"#d1fae5","200":"#a7f3d0","300":"#6ee7b7","400":"#34d399","500":"#10b981","600":"#059669","700":"#047857","800":"#065f46","900":"#064e3b"},"blue":{"50":"#eff6ff","100":"#dbeafe","200":"#bfdbfe","300":"#93c5fd","400":"#60a5fa","500":"#3b82f6","600":"#2563eb","700":"#1d4ed8","800":"#1e40af","900":"#1e3a8a"},"indigo":{"50":"#eef2ff","100":"#e0e7ff","200":"#c7d2fe","300":"#a5b4fc","400":"#818cf8","500":"#6366f1","600":"#4f46e5","700":"#4338ca","800":"#3730a3","900":"#312e81"},"purple":{"50":"#f5f3ff","100":"#ede9fe","200":"#ddd6fe","300":"#c4b5fd","400":"#a78bfa","500":"#8b5cf6","600":"#7c3aed","700":"#6d28d9","800":"#5b21b6","900":"#4c1d95"},"pink":{"50":"#fdf2f8","100":"#fce7f3","200":"#fbcfe8","300":"#f9a8d4","400":"#f472b6","500":"#ec4899","600":"#db2777","700":"#be185d","800":"#9d174d","900":"#831843"}},
+                ...{"primary":{"50":"var(--color-primary-50)","100":"var(--color-primary-100)","200":"var(--color-primary-200)","300":"var(--color-primary-300)","400":"var(--color-primary-400)","500":"var(--color-primary-500)","600":"var(--color-primary-600)","700":"var(--color-primary-700)","800":"var(--color-primary-800)","900":"var(--color-primary-900)","DEFAULT":"var(--color-primary)","focus":"var(--color-primary-focus)","content":"var(--color-primary-content)"},"secondary":{"50":"var(--color-secondary-50)","100":"var(--color-secondary-100)","200":"var(--color-secondary-200)","300":"var(--color-secondary-300)","400":"var(--color-secondary-400)","500":"var(--color-secondary-500)","600":"var(--color-secondary-600)","700":"var(--color-secondary-700)","800":"var(--color-secondary-800)","900":"var(--color-secondary-900)","DEFAULT":"var(--color-secondary)","focus":"var(--color-secondary-focus)","content":"var(--color-secondary-content)"},"accent":{"50":"var(--color-accent-50)","100":"var(--color-accent-100)","200":"var(--color-accent-200)","300":"var(--color-accent-300)","400":"var(--color-accent-400)","500":"var(--color-accent-500)","600":"var(--color-accent-600)","700":"var(--color-accent-700)","800":"var(--color-accent-800)","900":"var(--color-accent-900)","DEFAULT":"var(--color-accent)","focus":"var(--color-accent-focus)","content":"var(--color-accent-content)"},"neutral":{"50":"var(--color-neutral-50)","100":"var(--color-neutral-100)","200":"var(--color-neutral-200)","300":"var(--color-neutral-300)","400":"var(--color-neutral-400)","500":"var(--color-neutral-500)","600":"var(--color-neutral-600)","700":"var(--color-neutral-700)","800":"var(--color-neutral-800)","900":"var(--color-neutral-900)","DEFAULT":"var(--color-neutral)","focus":"var(--color-neutral-focus)","content":"var(--color-neutral-content)"},"info":{"50":"var(--color-info-50)","100":"var(--color-info-100)","200":"var(--color-info-200)","300":"var(--color-info-300)","400":"var(--color-info-400)","500":"var(--color-info-500)","600":"var(--color-info-600)","700":"var(--color-info-700)","800":"var(--color-info-800)","900":"var(--color-info-900)","DEFAULT":"var(--color-info)","focus":"var(--color-info-focus)","content":"var(--color-info-content)"},"success":{"50":"var(--color-success-50)","100":"var(--color-success-100)","200":"var(--color-success-200)","300":"var(--color-success-300)","400":"var(--color-success-400)","500":"var(--color-success-500)","600":"var(--color-success-600)","700":"var(--color-success-700)","800":"var(--color-success-800)","900":"var(--color-success-900)","DEFAULT":"var(--color-success)","focus":"var(--color-success-focus)","content":"var(--color-success-content)"},"warning":{"50":"var(--color-warning-50)","100":"var(--color-warning-100)","200":"var(--color-warning-200)","300":"var(--color-warning-300)","400":"var(--color-warning-400)","500":"var(--color-warning-500)","600":"var(--color-warning-600)","700":"var(--color-warning-700)","800":"var(--color-warning-800)","900":"var(--color-warning-900)","DEFAULT":"var(--color-warning)","focus":"var(--color-warning-focus)","content":"var(--color-warning-content)"},"error":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"},"danger":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"},"failure":{"50":"var(--color-error-50)","100":"var(--color-error-100)","200":"var(--color-error-200)","300":"var(--color-error-300)","400":"var(--color-error-400)","500":"var(--color-error-500)","600":"var(--color-error-600)","700":"var(--color-error-700)","800":"var(--color-error-800)","900":"var(--color-error-900)","DEFAULT":"var(--color-error)","focus":"var(--color-error-focus)","content":"var(--color-error-content)"}},
+                },
+              },
+            },
+            variants: {
+              extend: {
+                backgroundColor: ['active', 'group-hover'],
+                textColor: ['active', 'group-hover'],
+              },
+            },
+            plugins: [],
+          };
+  </script>
+
+</head>
+
+              <body class="h-full text-base-content">
+                <header id="header" class="bg-white py-4 px-8 flex justify-between items-center shadow-sm sticky top-0 z-50">
+  <div class="flex items-center">
+    <span class="text-2xl text-neutral-900 cursor-pointer">
+      One<span class="bg-neutral-800 text-white text-xs px-1 py-0.5 rounded">pane</span>
+      <span class="text-neutral-800">AI</span>
+    </span>
+  </div>
+  <div class="hidden md:flex space-x-8">
+    <span class="text-neutral-900 cursor-pointer">Features</span>
+    <span class="text-neutral-900 cursor-pointer">Azure Resilience</span>
+    <span class="text-neutral-900 cursor-pointer">Use Cases</span>
+    <span class="text-neutral-900 cursor-pointer">Pricing</span>
+  </div>
+  <div class="flex items-center space-x-4">
+    <span class="text-neutral-900 cursor-pointer">Login</span>
+    <span class="bg-neutral-800 text-white py-2 px-6 rounded-full cursor-pointer">Get Started</span>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="py-16 px-4 text-center bg-gradient-to-b from-neutral-50 to-neutral-100">
+  <div class="max-w-4xl mx-auto">
+    <div class="bg-neutral-200 inline-block px-4 py-2 rounded-lg mb-6">
+        <p class="text-lg text-neutral-700">
+          AI-Powered Azure Resilience <i class="ml-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-shield-halved" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-halved" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"></path></svg></i>
+        </p>
+      </div>
+    <h1 class="text-5xl md:text-6xl text-neutral-900 mb-2">
+      Optimize Your Azure Environment
+    </h1>
+    <h2 class="text-4xl md:text-5xl text-neutral-700 mb-8">
+      With Intelligent Governance
+    </h2>
+    <p class="text-xl md:text-2xl text-neutral-700 mb-8">
+      Take control of your cloud resources, ensure high availability,<br/>
+      and optimize costs with Onepane's AI-powered insights.
+    </p>
+    <span class="bg-neutral-800 hover:bg-neutral-900 text-white text-lg py-4 px-8 rounded-full inline-block shadow-lg cursor-pointer">
+      Schedule a Demo
+    </span>
+    <p class="text-neutral-600 mt-4">For CIOs and IT leaders • Enterprise-ready solution</p>
+  </div>
+</section>
+
+<!-- Problems Section -->
+<section id="challenges-section" class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl text-neutral-900 mb-4">Common Azure Governance Challenges</h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        Organizations face significant challenges in managing their Azure environments, leading to inefficiencies and increased risks.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Challenge 1 -->
+      <div id="challenge-1" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
+          <i class="fa-solid fa-tags text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Cloud Mismanagement</h3>
+        <p class="text-neutral-600">
+          Inconsistent tagging, lack of accountability, and poor resource organization lead to operational inefficiencies and security vulnerabilities.
+        </p>
+      </div>
+      
+      <!-- Challenge 2 -->
+      <div id="challenge-2" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
+          <i class="fa-solid fa-money-bill-wave text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Budget Overruns</h3>
+        <p class="text-neutral-600">
+          Inefficient cloud spending and lack of visibility into resource usage result in unexpected costs and budget overruns, impacting overall IT spending.
+        </p>
+      </div>
+      
+      <!-- Challenge 3 -->
+      <div id="challenge-3" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
+          <i class="fa-solid fa-triangle-exclamation text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Downtime Risk</h3>
+        <p class="text-neutral-600">
+          Misconfigured High Availability and Disaster Recovery strategies put critical applications at risk of extended downtime and business disruption.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Onepane AI Solution Section -->
+<section id="onepane-solution" class="py-16 px-4 bg-neutral-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <div class="bg-neutral-800 text-white inline-block px-3 py-1 rounded-full text-sm mb-4">
+        INTRODUCING
+      </div>
+      <h2 class="text-4xl text-neutral-900 mb-4">Onepane AI for Azure Resilience</h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        Our intelligent solution helps IT teams regain control of their Azure environments through automated governance and actionable insights.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      <div id="solution-visual" class="bg-white p-6 rounded-xl shadow-md">
+        <img class="w-full h-auto rounded-lg" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/3516410965-8143c08abeae107afbfc.png" alt="modern dashboard interface showing Azure resource management with resilience metrics, dark theme with blue and teal highlights, enterprise IT dashboard" />
+      </div>
+      
+      <div id="solution-features">
+        <h3 class="text-2xl text-neutral-900 mb-6">Comprehensive Azure Governance</h3>
+        
+        <div class="space-y-6">
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div class="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-tag text-neutral-700"></i>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg text-neutral-900 mb-2">Automated Tagging & Policy Enforcement</h4>
+              <p class="text-neutral-600">
+                Implement consistent tagging across resources and enforce governance policies automatically to maintain control.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div class="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-chart-pie text-neutral-700"></i>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg text-neutral-900 mb-2">Granular Cost Visibility & Optimization</h4>
+              <p class="text-neutral-600">
+                Gain detailed insights into resource usage and costs, with AI-powered recommendations for optimization.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div class="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-layer-group text-neutral-700"></i>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg text-neutral-900 mb-2">Tier-Based DR and HA Validation</h4>
+              <p class="text-neutral-600">
+                Apply appropriate resilience strategies based on workload criticality, ensuring optimal resource allocation.
+              </p>
+            </div>
+          </div>
+          
+          <div class="flex">
+            <div class="mr-4 mt-1">
+              <div class="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center">
+                <i class="fa-solid fa-magnifying-glass-chart text-neutral-700"></i>
+              </div>
+            </div>
+            <div>
+              <h4 class="text-lg text-neutral-900 mb-2">Real-time Resource Tracking</h4>
+              <p class="text-neutral-600">
+                Monitor resources in real-time to identify configuration drift and potential issues before they impact operations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Onepane AI Showcase Section -->
+<section id="onepane-ai-showcase" class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl text-neutral-900 mb-4">Onepane AI: Your Azure Resilience Expert</h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        Our AI assistant provides actionable insights and prioritized recommendations tailored to your Azure environment.
+      </p>
+    </div>
+    
+    <div class="bg-neutral-100 rounded-3xl p-1 shadow-xl">
+      <div class="bg-white rounded-3xl p-6">
+        <h3 class="text-center text-2xl text-neutral-900 mb-6">See How Onepane AI Works</h3>
+        
+        <div class="flex flex-col mb-4 border border-neutral-200 rounded-xl overflow-hidden">
+          <!-- Chat Interface Header -->
+          <div class="bg-neutral-800 text-white p-3 flex justify-between items-center">
+            <div class="flex items-center">
+              <i class="fa-solid fa-comment-dots mr-2"></i>
+              <span>Onepane AI Assistant</span>
+            </div>
+            <div class="flex space-x-2">
+              <button class="text-white hover:text-neutral-300">
+                <i class="fa-solid fa-gear"></i>
+              </button>
+              <button class="text-white hover:text-neutral-300">
+                <i class="fa-solid fa-expand"></i>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Chat Messages -->
+          <div class="bg-neutral-50 p-4 h-96 overflow-y-auto flex flex-col space-y-4">
+            <!-- User Question -->
+            <div class="flex justify-end">
+              <div class="bg-neutral-200 text-neutral-900 p-3 rounded-lg max-w-md">
+                <p>What are our most critical Azure resilience issues?</p>
+              </div>
+            </div>
+            
+            <!-- AI Response -->
+            <div class="flex justify-start">
+              <div class="bg-white border border-neutral-200 p-4 rounded-lg shadow-sm max-w-2xl">
+                <div class="flex items-center mb-2">
+                  <div class="bg-neutral-800 rounded-full w-8 h-8 flex items-center justify-center mr-2">
+                    <i class="fa-solid fa-robot text-white"></i>
+                  </div>
+                  <span class="text-neutral-900">Onepane AI</span>
+                </div>
+                
+                <p class="text-neutral-700 mb-4">Based on my analysis of your Azure environment, I've identified these critical resilience issues:</p>
+                
+                <!-- Custom Component: Resilience Issues -->
+                <div class="bg-neutral-50 rounded-lg p-4 mb-4 border border-neutral-200">
+                  <div class="flex items-center mb-3">
+                    <i class="fa-solid fa-shield-halved text-neutral-700 mr-2"></i>
+                    <h4 class="text-neutral-800">Azure Resilience Issues (High Priority)</h4>
+                  </div>
+                  <div class="overflow-x-auto">
+                    <table class="min-w-full bg-white rounded-lg">
+                      <thead class="bg-neutral-100">
+                        <tr>
+                          <th class="py-2 px-3 text-left text-xs text-neutral-500 uppercase tracking-wider">Resource</th>
+                          <th class="py-2 px-3 text-left text-xs text-neutral-500 uppercase tracking-wider">Issue</th>
+                          <th class="py-2 px-3 text-left text-xs text-neutral-500 uppercase tracking-wider">Impact</th>
+                          <th class="py-2 px-3 text-left text-xs text-neutral-500 uppercase tracking-wider">Effort</th>
+                        </tr>
+                      </thead>
+                      <tbody class="divide-y divide-neutral-200">
+                        <tr class="bg-neutral-50">
+                          <td class="py-2 px-3 text-sm">Payment API (App Service)</td>
+                          <td class="py-2 px-3 text-sm">No disaster recovery configuration</td>
+                          <td class="py-2 px-3 text-sm"><span class="bg-neutral-800 text-white px-2 py-0.5 rounded-full text-xs">Critical</span></td>
+                          <td class="py-2 px-3 text-sm">Medium</td>
+                        </tr>
+                        <tr>
+                          <td class="py-2 px-3 text-sm">Customer Database (SQL)</td>
+                          <td class="py-2 px-3 text-sm">Single availability zone</td>
+                          <td class="py-2 px-3 text-sm"><span class="bg-neutral-800 text-white px-2 py-0.5 rounded-full text-xs">Critical</span></td>
+                          <td class="py-2 px-3 text-sm">High</td>
+                        </tr>
+                        <tr class="bg-neutral-50">
+                          <td class="py-2 px-3 text-sm">Authentication Service (VM)</td>
+                          <td class="py-2 px-3 text-sm">No load balancer configured</td>
+                          <td class="py-2 px-3 text-sm"><span class="bg-neutral-700 text-white px-2 py-0.5 rounded-full text-xs">High</span></td>
+                          <td class="py-2 px-3 text-sm">Low</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                
+                <!-- Custom Component: Recommendation Details -->
+                <div class="bg-neutral-50 rounded-lg p-4 mb-4 border border-neutral-200">
+                  <div class="flex items-center mb-3">
+                    <i class="fa-solid fa-lightbulb text-neutral-700 mr-2"></i>
+                    <h4 class="text-neutral-800">Top Recommendation Details</h4>
+                  </div>
+                  
+                  <div class="bg-white p-3 rounded-lg border border-neutral-200 mb-3">
+                    <h5 class="text-neutral-900 mb-2">Payment API: Implement Disaster Recovery</h5>
+                    <div class="grid grid-cols-2 gap-4 mb-3">
+                      <div>
+                        <p class="text-xs text-neutral-500 mb-1">Estimated Cost Impact</p>
+                        <div class="flex items-center">
+                          <span class="text-neutral-900">+$450/month</span>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="text-xs text-neutral-500 mb-1">Implementation Effort</p>
+                        <div class="flex items-center">
+                          <span class="text-neutral-900">8-12 hours</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mb-3">
+                      <p class="text-xs text-neutral-500 mb-1">Business Impact</p>
+                      <p class="text-sm text-neutral-700">Potential revenue loss of ~$25K/hour during outages. Payment processing is critical to business operations.</p>
+                    </div>
+                    <button class="bg-neutral-800 text-white px-3 py-1 rounded-lg text-sm flex items-center">
+                      <i class="fa-solid fa-arrow-right mr-1"></i> View Implementation Steps
+                    </button>
+                  </div>
+                </div>
+                
+                <p class="text-neutral-700">These issues represent the highest priority concerns based on business criticality. Would you like me to provide a detailed remediation plan for any specific issue?</p>
+              </div>
+            </div>
+            
+            <!-- User Follow-up Question -->
+            <div class="flex justify-end">
+              <div class="bg-neutral-200 text-neutral-900 p-3 rounded-lg max-w-md">
+                <p>Show me the remediation plan for the Payment API</p>
+              </div>
+            </div>
+            
+            <!-- AI Response with Remediation Plan -->
+            <div class="flex justify-start">
+              <div class="bg-white border border-neutral-200 p-4 rounded-lg shadow-sm max-w-2xl">
+                <div class="flex items-center mb-2">
+                  <div class="bg-neutral-800 rounded-full w-8 h-8 flex items-center justify-center mr-2">
+                    <i class="fa-solid fa-robot text-white"></i>
+                  </div>
+                  <span class="text-neutral-900">Onepane AI</span>
+                </div>
+                
+                <p class="text-neutral-700 mb-4">Here's the remediation plan for implementing disaster recovery for the Payment API:</p>
+                
+                <!-- Custom Component: Remediation Plan -->
+                <div class="bg-neutral-50 rounded-lg p-4 mb-4 border border-neutral-200">
+                  <div class="flex items-center mb-3">
+                    <i class="fa-solid fa-list-check text-neutral-700 mr-2"></i>
+                    <h4 class="text-neutral-800">Payment API: Disaster Recovery Implementation</h4>
+                  </div>
+                  
+                  <div class="space-y-4">
+                    <div class="bg-white p-3 rounded-lg border border-neutral-200">
+                      <div class="flex items-start">
+                        <div class="bg-neutral-800 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                          <span class="text-xs">1</span>
+                        </div>
+                        <div>
+                          <h5 class="text-neutral-900 mb-1">Deploy Secondary App Service</h5>
+                          <p class="text-sm text-neutral-700">Create a secondary App Service instance in the East US 2 region to complement your primary instance in West US.</p>
+                          <div class="mt-2 text-xs text-neutral-500">Estimated time: 1-2 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="bg-white p-3 rounded-lg border border-neutral-200">
+                      <div class="flex items-start">
+                        <div class="bg-neutral-800 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                          <span class="text-xs">2</span>
+                        </div>
+                        <div>
+                          <h5 class="text-neutral-900 mb-1">Configure Traffic Manager</h5>
+                          <p class="text-sm text-neutral-700">Set up an Azure Traffic Manager profile with priority routing to direct traffic to the secondary region during failover events.</p>
+                          <div class="mt-2 text-xs text-neutral-500">Estimated time: 2-3 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="bg-white p-3 rounded-lg border border-neutral-200">
+                      <div class="flex items-start">
+                        <div class="bg-neutral-800 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                          <span class="text-xs">3</span>
+                        </div>
+                        <div>
+                          <h5 class="text-neutral-900 mb-1">Implement Automated Deployment</h5>
+                          <p class="text-sm text-neutral-700">Update your CI/CD pipeline to deploy to both primary and secondary regions simultaneously.</p>
+                          <div class="mt-2 text-xs text-neutral-500">Estimated time: 3-4 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="bg-white p-3 rounded-lg border border-neutral-200">
+                      <div class="flex items-start">
+                        <div class="bg-neutral-800 text-white w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 mr-3">
+                          <span class="text-xs">4</span>
+                        </div>
+                        <div>
+                          <h5 class="text-neutral-900 mb-1">Test Failover Procedures</h5>
+                          <p class="text-sm text-neutral-700">Develop and test failover procedures to ensure smooth transition during actual outages.</p>
+                          <div class="mt-2 text-xs text-neutral-500">Estimated time: 2-3 hours</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="mt-4 pt-3 border-t border-neutral-200">
+                    <div class="flex justify-between items-center">
+                      <div>
+                        <span class="text-sm text-neutral-700">Total Estimated Effort: 8-12 hours</span>
+                      </div>
+                      <button class="bg-neutral-800 text-white px-3 py-1 rounded-lg text-sm flex items-center">
+                        <i class="fa-solid fa-file-arrow-down mr-1"></i> Export Plan
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <p class="text-neutral-700">This plan addresses the critical resilience gap for your Payment API. By implementing these steps, you'll reduce the risk of extended downtime and ensure business continuity.</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Chat Input -->
+          <div class="bg-white p-4 border-t border-neutral-200">
+            <div class="flex items-center">
+              <input type="text" placeholder="Ask about your Azure environment, resilience issues, or recommendations..." class="flex-1 border border-neutral-300 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-neutral-500">
+              <button class="ml-2 bg-neutral-800 text-white p-2 rounded-lg">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex justify-between items-center mt-6">
+          <div class="text-neutral-700">
+            <span>Try asking:</span>
+            <div class="flex flex-wrap gap-2 mt-2">
+              <button class="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm py-1 px-3 rounded-full">
+                "Show me storage redundancy issues"
+              </button>
+              <button class="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm py-1 px-3 rounded-full">
+                "What's our DR plan for databases?"
+              </button>
+              <button class="bg-neutral-100 hover:bg-neutral-200 text-neutral-800 text-sm py-1 px-3 rounded-full">
+                "Analyze VM availability sets"
+              </button>
+            </div>
+          </div>
+          <button class="bg-neutral-800 hover:bg-neutral-900 text-white py-2 px-4 rounded-lg flex items-center gap-2">
+            <i class="fa-solid fa-play"></i>
+            <span>Interactive Demo</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- USP Section -->
+<section id="usp-section" class="py-16 px-4 bg-neutral-50">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl text-neutral-900 mb-4">Key Differentiators</h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        What makes Onepane AI's approach to Azure resilience unique and effective.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div id="usp-1" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
+          <i class="fa-solid fa-chart-impact text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Impact Assessment</h3>
+        <p class="text-neutral-600 mb-4">
+          Understand the business impact, cost implications, and effort required for each recommendation.
+        </p>
+        <div class="pt-4 border-t border-neutral-100">
+          <p class="text-sm text-neutral-500">
+            <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
+            Quantified business impact
+          </p>
+        </div>
+      </div>
+      
+      <div id="usp-2" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
+          <i class="fa-solid fa-list-ol text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Priority-Based Fixes</h3>
+        <p class="text-neutral-600 mb-4">
+          Prioritize fixes based on business-critical needs, ensuring the most important systems are addressed first.
+        </p>
+        <div class="pt-4 border-t border-neutral-100">
+          <p class="text-sm text-neutral-500">
+            <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
+            Risk-based prioritization
+          </p>
+        </div>
+      </div>
+      
+      <div id="usp-3" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
+          <i class="fa-solid fa-bolt text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Operational Efficiency</h3>
+        <p class="text-neutral-600 mb-4">
+          Enhance operational efficiency with automated analysis and actionable remediation plans.
+        </p>
+        <div class="pt-4 border-t border-neutral-100">
+          <p class="text-sm text-neutral-500">
+            <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
+            Reduced manual effort
+          </p>
+        </div>
+      </div>
+      
+      <div id="usp-4" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
+          <i class="fa-solid fa-brain text-neutral-700 text-xl"></i>
+        </div>
+        <h3 class="text-xl text-neutral-900 mb-3">Informed Decisions</h3>
+        <p class="text-neutral-600 mb-4">
+          Make data-driven decisions with Onepane's comprehensive insights and analysis.
+        </p>
+        <div class="pt-4 border-t border-neutral-100">
+          <p class="text-sm text-neutral-500">
+            <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
+            Contextual recommendations
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Results Section -->
+<section id="results-section" class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl text-neutral-900 mb-4">Real Results for IT Leaders</h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        See the tangible outcomes organizations achieve with Onepane AI for Azure Resilience.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div id="result-1" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
+            <i class="fa-solid fa-check text-white"></i>
+          </div>
+          <h3 class="text-xl text-neutral-900">Improved Governance</h3>
+        </div>
+        <p class="text-neutral-600 mb-4">
+          Automated tagging, policy enforcement, and resource tracking help maintain control over your Azure environment.
+        </p>
+        <div class="pt-4 border-t border-neutral-100 text-neutral-700">
+          <div class="flex items-center">
+            <i class="fa-solid fa-arrow-trend-up text-neutral-800 mr-2"></i>
+            <span>85% reduction in policy violations</span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="result-2" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
+            <i class="fa-solid fa-check text-white"></i>
+          </div>
+          <h3 class="text-xl text-neutral-900">Efficient Resource Allocation</h3>
+        </div>
+        <p class="text-neutral-600 mb-4">
+          Granular cost visibility and workload optimization lead to better resource allocation and reduced waste.
+        </p>
+        <div class="pt-4 border-t border-neutral-100 text-neutral-700">
+          <div class="flex items-center">
+            <i class="fa-solid fa-arrow-trend-up text-neutral-800 mr-2"></i>
+            <span>23% average cost reduction</span>
+          </div>
+        </div>
+      </div>
+      
+      <div id="result-3" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
+            <i class="fa-solid fa-check text-white"></i>
+          </div>
+          <h3 class="text-xl text-neutral-900">Stable Configurations</h3>
+        </div>
+        <p class="text-neutral-600 mb-4">
+          Tier-based DR and HA validation ensure appropriate resilience strategies are in place for critical workloads.
+        </p>
+        <div class="pt-4 border-t border-neutral-100 text-neutral-700">
+          <div class="flex items-center">
+            <i class="fa-solid fa-arrow-trend-up text-neutral-800 mr-2"></i>
+            <span>99.99% availability for critical systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section id="cta-section" class="py-16 px-4 bg-neutral-800 text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl mb-6">Ready to Optimize Your Azure Environment?</h2>
+    <p class="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
+      Join leading organizations that use Onepane AI to ensure Azure resilience, optimize costs, and improve operational efficiency.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <span class="bg-white text-neutral-800 px-8 py-4 rounded-lg font-medium hover:bg-neutral-100 transition-colors cursor-pointer">
+        Schedule a Demo
+      </span>
+      <span class="border border-white px-8 py-4 rounded-lg font-medium hover:bg-white hover:text-neutral-800 transition-colors cursor-pointer">
+        Learn More
+      </span>
+    </div>
+    <p class="mt-6 text-neutral-400">
+      Perfect for CIOs and IT leaders looking to improve cloud governance
+    </p>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-16 px-4 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl text-neutral-900 mb-4">What IT Leaders Say</h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        Hear from CIOs and IT Directors who have transformed their Azure environments with Onepane AI.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div id="testimonial-1" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="mb-4">
+          <i class="fa-solid fa-quote-left text-neutral-300 text-4xl"></i>
+        </div>
+        <p class="text-neutral-700 mb-6">
+          "Onepane AI has transformed how we manage our Azure environment. We've reduced our cloud spend by 30% while improving our resilience posture significantly."
+        </p>
+        <div class="flex items-center">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-2.jpg" alt="CIO" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="text-neutral-900 font-medium">Michael Johnson</h4>
+            <p class="text-neutral-600">CIO, Financial Services Company</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="testimonial-2" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="mb-4">
+          <i class="fa-solid fa-quote-left text-neutral-300 text-4xl"></i>
+        </div>
+        <p class="text-neutral-700 mb-6">
+          "The prioritized recommendations made it easy to focus our team's efforts on the most critical issues first. The impact assessment for each fix was particularly valuable."
+        </p>
+        <div class="flex items-center">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-1.jpg" alt="IT Director" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="text-neutral-900 font-medium">Sarah Chen</h4>
+            <p class="text-neutral-600">IT Director, Healthcare Provider</p>
+          </div>
+        </div>
+      </div>
+      
+      <div id="testimonial-3" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div class="mb-4">
+          <i class="fa-solid fa-quote-left text-neutral-300 text-4xl"></i>
+        </div>
+        <p class="text-neutral-700 mb-6">
+          "Onepane AI helped us identify and fix resilience gaps we didn't even know existed. Our systems are now more stable and we have confidence in our DR strategy."
+        </p>
+        <div class="flex items-center">
+          <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/avatars/avatar-3.jpg" alt="VP of Technology" class="w-12 h-12 rounded-full mr-4">
+          <div>
+            <h4 class="text-neutral-900 font-medium">David Rodriguez</h4>
+            <p class="text-neutral-600">VP of Technology, Retail Chain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Final CTA Section -->
+<section id="final-cta" class="py-20 px-4 bg-gradient-to-br from-neutral-800 to-neutral-900 text-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-4xl mb-6">Transform Your Azure Environment Today</h2>
+    <p class="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
+      Get started with Onepane AI and begin your journey to better Azure resilience, governance, and cost optimization.
+    </p>
+    <span class="bg-white text-neutral-800 px-10 py-4 rounded-lg font-medium text-lg hover:bg-neutral-100 transition-colors inline-block cursor-pointer">
+      Request a Demo
+    </span>
+    <p class="mt-6 text-neutral-400">
+      Enterprise-ready solution • Rapid implementation • Immediate value
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="footer" class="bg-neutral-900 text-neutral-400 py-12 px-4">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+      <div>
+        <div class="text-2xl text-white mb-4">
+          One<span class="bg-white text-neutral-900 text-xs px-1 py-0.5 rounded">pane</span>
+          <span>AI</span>
+        </div>
+        <p class="mb-4">
+          AI-powered solutions for enterprise IT teams.
+        </p>
+        <div class="flex space-x-4">
+          <span class="text-neutral-400 hover:text-white cursor-pointer">
+            <i class="fa-brands fa-linkedin"></i>
+          </span>
+          <span class="text-neutral-400 hover:text-white cursor-pointer">
+            <i class="fa-brands fa-twitter"></i>
+          </span>
+          <span class="text-neutral-400 hover:text-white cursor-pointer">
+            <i class="fa-brands fa-github"></i>
+          </span>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-white text-lg mb-4">Products</h3>
+        <ul class="space-y-2">
+          <li><span class="hover:text-white cursor-pointer">Azure Resilience</span></li>
+          <li><span class="hover:text-white cursor-pointer">Cost Optimization</span></li>
+          <li><span class="hover:text-white cursor-pointer">IT Assistant</span></li>
+          <li><span class="hover:text-white cursor-pointer">Enterprise GenAI</span></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-white text-lg mb-4">Resources</h3>
+        <ul class="space-y-2">
+          <li><span class="hover:text-white cursor-pointer">Documentation</span></li>
+          <li><span class="hover:text-white cursor-pointer">Blog</span></li>
+          <li><span class="hover:text-white cursor-pointer">Case Studies</span></li>
+          <li><span class="hover:text-white cursor-pointer">Webinars</span></li>
+        </ul>
+      </div>
+      
+      <div>
+        <h3 class="text-white text-lg mb-4">Company</h3>
+        <ul class="space-y-2">
+          <li><span class="hover:text-white cursor-pointer">About Us</span></li>
+          <li><span class="hover:text-white cursor-pointer">Careers</span></li>
+          <li><span class="hover:text-white cursor-pointer">Contact</span></li>
+          <li><span class="hover:text-white cursor-pointer">Privacy Policy</span></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="pt-8 border-t border-neutral-800 text-sm text-center">
+      <p>© 2025 Onepane AI. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+              </body>
+            </html>
+          
