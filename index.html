@@ -88,9 +88,9 @@
               <body class="h-full text-base-content">
                 <div id="main-container" class="min-h-screen bg-neutral-50">
   <!-- Header Section -->
-  <header id="header" class="bg-white py-4 px-8 flex justify-between items-center shadow-sm sticky top-0 z-50">
+  <header id="header" class="bg-white py-4 px-4 md:px-8 flex justify-between items-center shadow-sm sticky top-0 z-50">
     <div class="flex items-center">
-        <img src="logo.png" alt="Onepane AI" class="h-8 cursor-pointer">
+        <img src="logo.png" alt="Onepane AI" class="h-6 md:h-8 cursor-pointer">
     </div>
     <div class="hidden md:flex space-x-8">
       <span class="text-neutral-900 cursor-pointer hover:text-primary"><a href="#features">Features</a></span>
@@ -109,75 +109,75 @@
       <span class="text-neutral-900 cursor-pointer hover:text-primary"><a href="#about">About</a></span>
     </div>
     <div class="flex items-center space-x-4">
-      <a href="https://tally.so/r/wLgLkj" class="bg-neutral-800 text-white py-2 px-6 rounded-full cursor-pointer">Get Started</a>
+      <a href="https://tally.so/r/wLgLkj" class="bg-neutral-800 text-white py-2 px-4 md:px-6 rounded-full cursor-pointer text-sm md:text-base">Get Started</a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section id="hero" class="py-16 px-4 text-center bg-gradient-to-b from-neutral-50 to-neutral-100">
+  <section id="hero" class="py-8 md:py-16 px-4 text-center bg-gradient-to-b from-neutral-50 to-neutral-100">
     <div class="max-w-4xl mx-auto">
-        <div class="bg-neutral-200 inline-block px-4 py-2 rounded-lg mb-6">
-            <p class="text-lg text-neutral-700">
+        <div class="bg-neutral-200 inline-block px-3 md:px-4 py-2 rounded-lg mb-4 md:mb-6">
+            <p class="text-base md:text-lg text-neutral-700">
               AI-Powered Azure Resilience <i class="ml-1" data-fa-i2svg=""><svg class="svg-inline--fa fa-shield-halved" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="shield-halved" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" data-fa-i2svg=""><path fill="currentColor" d="M256 0c4.6 0 9.2 1 13.4 2.9L457.7 82.8c22 9.3 38.4 31 38.3 57.2c-.5 99.2-41.3 280.7-213.6 363.2c-16.7 8-36.1 8-52.8 0C57.3 420.7 16.5 239.2 16 140c-.1-26.2 16.3-47.9 38.3-57.2L242.7 2.9C246.8 1 251.4 0 256 0zm0 66.8V444.8C394 378 431.1 230.1 432 141.4L256 66.8l0 0z"></path></svg></i>
             </p>
           </div>
-      <h1 class="text-5xl md:text-6xl text-neutral-900 mb-2">
+      <h1 class="text-3xl md:text-5xl lg:text-6xl text-neutral-900 mb-2">
         Ensure Azure Resilience
       </h1>
-      <h2 class="text-4xl md:text-5xl text-neutral-700 mb-8">
+      <h2 class="text-2xl md:text-4xl lg:text-5xl text-neutral-700 mb-4 md:mb-8">
         with Intelligent Assistance
       </h2>
-      <p class="text-xl md:text-2xl text-neutral-700 mb-8">
-        Identify and fix cloud misconfigurations, improve HA/DR strategies,<br/>
+      <p class="text-lg md:text-xl lg:text-2xl text-neutral-700 mb-6 md:mb-8">
+        Identify and fix cloud misconfigurations, improve HA/DR strategies,<br class="hidden md:block"/>
         and optimize your Azure environment with AI-powered insights.
       </p>
-      <a href="https://tally.so/r/wLgLkj" class="bg-neutral-800 hover:bg-neutral-900 text-white text-lg py-4 px-8 rounded-full inline-block shadow-lg cursor-pointer">
+      <a href="https://tally.so/r/wLgLkj" class="bg-neutral-800 hover:bg-neutral-900 text-white text-base md:text-lg py-3 md:py-4 px-6 md:px-8 rounded-full inline-block shadow-lg cursor-pointer">
         Request Demo
       </a>
-      <p class="text-neutral-600 mt-4">No credit card required • Setup in minutes</p>
+      <p class="text-neutral-600 mt-4 text-sm md:text-base">No credit card required • Setup in minutes</p>
     </div>
   </section>
 
   <!-- Problems Section -->
-  <section id="problems" class="py-16 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl text-neutral-900 mb-4">The Challenges Organizations Face</h2>
-        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+  <section id="problems" class="py-8 md:py-16 px-4 bg-white">
+    <div class="w-full max-w-6xl mx-auto">
+      <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-2xl md:text-4xl text-neutral-900 mb-4">The Challenges Organizations Face</h2>
+        <p class="text-base md:text-xl text-neutral-600 max-w-3xl mx-auto">
           Cloud environments are complex and constantly changing, leading to various issues that affect performance and reliability.
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-8">
         <!-- Challenge 1 -->
-        <div id="challenge-1" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
-            <i class="fa-solid fa-cloud-exclamation text-neutral-700 text-xl"></i>
+        <div id="challenge-1" class="flex-1 min-w-full md:min-w-[calc(33.333%-1rem)] bg-neutral-50 rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
+            <i class="fa-solid fa-cloud-exclamation text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Cloud Mismanagement</h3>
-          <p class="text-neutral-600">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Cloud Mismanagement</h3>
+          <p class="text-sm md:text-base text-neutral-600">
             Inconsistent resource configurations, improper tagging, and lack of accountability lead to operational inefficiencies and security risks.
           </p>
         </div>
         
         <!-- Challenge 2 -->
-        <div id="challenge-2" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
-            <i class="fa-solid fa-money-bill-wave text-neutral-700 text-xl"></i>
+        <div id="challenge-2" class="flex-1 min-w-full md:min-w-[calc(33.333%-1rem)] bg-neutral-50 rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
+            <i class="fa-solid fa-money-bill-wave text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Budget Overruns</h3>
-          <p class="text-neutral-600">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Budget Overruns</h3>
+          <p class="text-sm md:text-base text-neutral-600">
             Inefficient cloud spending and lack of visibility into resource usage result in unexpected costs and budget overruns.
           </p>
         </div>
         
         <!-- Challenge 3 -->
-        <div id="challenge-3" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
-            <i class="fa-solid fa-triangle-exclamation text-neutral-700 text-xl"></i>
+        <div id="challenge-3" class="flex-1 min-w-full md:min-w-[calc(33.333%-1rem)] bg-neutral-50 rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4">
+            <i class="fa-solid fa-triangle-exclamation text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Downtime Risk</h3>
-          <p class="text-neutral-600">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Downtime Risk</h3>
+          <p class="text-sm md:text-base text-neutral-600">
             Misconfigured High Availability and Disaster Recovery strategies put critical applications at risk of extended downtime.
           </p>
         </div>
@@ -186,26 +186,26 @@
   </section>
 
   <!-- Azure Resilience Section -->
-  <section class="py-16 px-4 bg-neutral-50" id="features">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl text-neutral-900 mb-4">Introducing <span class="text-blue-600">Onepane for Azure Resilience</span></h2>
-        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+  <section class="py-8 md:py-16 px-4 bg-neutral-50" id="features">
+    <div class="w-full max-w-6xl mx-auto">
+      <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-2xl md:text-4xl text-neutral-900 mb-4">Introducing <span class="text-blue-600">Onepane for Azure Resilience</span></h2>
+        <p class="text-base md:text-xl text-neutral-600 max-w-3xl mx-auto">
           Our comprehensive solution ensures your Azure environment remains resilient, optimized, and cost-effective.
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-        <div id="resilience-visual" class="bg-white p-6 rounded-xl shadow-md">
-            <div class="bg-neutral-600 h-[400px] rounded-lg flex items-center justify-center overflow-hidden">
+      <div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+        <div id="resilience-visual" class="flex-1 min-w-full md:min-w-[calc(50%-1.5rem)] bg-white p-4 md:p-6 rounded-xl shadow-md">
+            <div class="bg-neutral-600 h-[300px] md:h-[400px] rounded-lg flex items-center justify-center overflow-hidden">
                 <img src="screenshot.png" alt="Azure Environment Resilience Visualization Dashboard" class="w-full h-full object-cover">
               </div>
         </div>
         
         <div id="resilience-features">
-          <h3 class="text-2xl text-neutral-900 mb-6">Continuously Analyze & Improve</h3>
+          <h3 class="text-xl md:text-2xl text-neutral-900 mb-6">Continuously Analyze & Improve</h3>
           
-          <div class="space-y-6">
+          <div class="space-y-4 md:space-y-6">
             <div class="flex">
               <div class="mr-4 mt-1">
                 <div class="w-8 h-8 bg-neutral-200 rounded-full flex items-center justify-center">
@@ -213,8 +213,8 @@
                 </div>
               </div>
               <div>
-                <h4 class="text-lg text-neutral-900 mb-2">Detect Resiliency Gaps</h4>
-                <p class="text-neutral-600">
+                <h4 class="text-base md:text-lg text-neutral-900 mb-2">Detect Resiliency Gaps</h4>
+                <p class="text-sm md:text-base text-neutral-600">
                   Automatically scan your Azure environment to identify potential points of failure and resilience gaps.
                 </p>
               </div>
@@ -227,8 +227,8 @@
                 </div>
               </div>
               <div>
-                <h4 class="text-lg text-neutral-900 mb-2">Proactive Recommendations</h4>
-                <p class="text-neutral-600">
+                <h4 class="text-base md:text-lg text-neutral-900 mb-2">Proactive Recommendations</h4>
+                <p class="text-sm md:text-base text-neutral-600">
                   Receive actionable recommendations to strengthen your infrastructure before issues occur.
                 </p>
               </div>
@@ -241,8 +241,8 @@
                 </div>
               </div>
               <div>
-                <h4 class="text-lg text-neutral-900 mb-2">Tier-Based DR and HA Validation</h4>
-                <p class="text-neutral-600">
+                <h4 class="text-base md:text-lg text-neutral-900 mb-2">Tier-Based DR and HA Validation</h4>
+                <p class="text-sm md:text-base text-neutral-600">
                   Apply appropriate resilience strategies based on workload criticality, ensuring optimal resource allocation.
                 </p>
               </div>
@@ -255,8 +255,8 @@
                 </div>
               </div>
               <div>
-                <h4 class="text-lg text-neutral-900 mb-2">Cost-Aligned Strategies</h4>
-                <p class="text-neutral-600">
+                <h4 class="text-base md:text-lg text-neutral-900 mb-2">Cost-Aligned Strategies</h4>
+                <p class="text-sm md:text-base text-neutral-600">
                   Achieve a cloud resiliency posture that balances performance and budgetary parameters.
                 </p>
               </div>
@@ -268,74 +268,74 @@
   </section>
 
   <!-- Key Benefits Section -->
-  <section id="usp-section" class="py-16 px-4 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl text-neutral-900 mb-4">Key Differentiators</h2>
-        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+  <section id="usp-section" class="py-8 md:py-16 px-4 bg-white">
+    <div class="w-full max-w-6xl mx-auto">
+      <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-2xl md:text-4xl text-neutral-900 mb-4">Key Differentiators</h2>
+        <p class="text-base md:text-xl text-neutral-600 max-w-3xl mx-auto">
           What makes Onepane AI's approach to Azure resilience unique and effective.
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div id="usp-1" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
-            <i class="fa-solid fa-chart-impact text-neutral-700 text-xl"></i>
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-8">
+        <div id="usp-1" class="flex-1 min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(25%-1.5rem)] bg-white rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4 md:mb-6">
+            <i class="fa-solid fa-chart-impact text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Impact Assessment</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Impact Assessment</h3>
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Understand the business impact, cost implications, and effort required for each recommendation.
           </p>
           <div class="pt-4 border-t border-neutral-100">
-            <p class="text-sm text-neutral-500">
+            <p class="text-xs md:text-sm text-neutral-500">
               <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
               Quantified business impact
             </p>
           </div>
         </div>
         
-        <div id="usp-2" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
-            <i class="fa-solid fa-list-ol text-neutral-700 text-xl"></i>
+        <div id="usp-2" class="flex-1 min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(25%-1.5rem)] bg-white rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4 md:mb-6">
+            <i class="fa-solid fa-list-ol text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Priority-Based Fixes</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Priority-Based Fixes</h3>
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Prioritize fixes based on business-critical needs, ensuring the most important systems are addressed first.
           </p>
           <div class="pt-4 border-t border-neutral-100">
-            <p class="text-sm text-neutral-500">
+            <p class="text-xs md:text-sm text-neutral-500">
               <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
               Risk-based prioritization
             </p>
           </div>
         </div>
         
-        <div id="usp-3" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
-            <i class="fa-solid fa-bolt text-neutral-700 text-xl"></i>
+        <div id="usp-3" class="flex-1 min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(25%-1.5rem)] bg-white rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4 md:mb-6">
+            <i class="fa-solid fa-bolt text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Operational Efficiency</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Operational Efficiency</h3>
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Enhance operational efficiency with automated analysis and executable remediation plans.
           </p>
           <div class="pt-4 border-t border-neutral-100">
-            <p class="text-sm text-neutral-500">
+            <p class="text-xs md:text-sm text-neutral-500">
               <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
               Reduced manual effort
             </p>
           </div>
         </div>
         
-        <div id="usp-4" class="bg-white rounded-xl p-6 shadow-sm border border-neutral-200">
-          <div class="w-12 h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-6">
-            <i class="fa-solid fa-brain text-neutral-700 text-xl"></i>
+        <div id="usp-4" class="flex-1 min-w-full md:min-w-[calc(50%-1rem)] lg:min-w-[calc(25%-1.5rem)] bg-white rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
+          <div class="w-10 h-10 md:w-12 md:h-12 bg-neutral-200 rounded-lg flex items-center justify-center mb-4 md:mb-6">
+            <i class="fa-solid fa-brain text-neutral-700 text-lg md:text-xl"></i>
           </div>
-          <h3 class="text-xl text-neutral-900 mb-3">Informed Decisions</h3>
-          <p class="text-neutral-600 mb-4">
+          <h3 class="text-lg md:text-xl text-neutral-900 mb-3">Informed Decisions</h3>
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Make data-driven decisions with Onepane's comprehensive insights and analysis.
           </p>
           <div class="pt-4 border-t border-neutral-100">
-            <p class="text-sm text-neutral-500">
+            <p class="text-xs md:text-sm text-neutral-500">
               <i class="fa-solid fa-check text-neutral-800 mr-2"></i>
               Contextual recommendations
             </p>
@@ -347,66 +347,66 @@
 
  
 <!-- Results Section -->
-<section id="results-section" class="py-16 px-4 bg-neutral-50">
-    <div class="max-w-6xl mx-auto">
-      <div class="text-center mb-16">
-        <h2 class="text-4xl text-neutral-900 mb-4">Real Results for IT Leaders</h2>
-        <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+<section id="results-section" class="py-8 md:py-16 px-4 bg-neutral-50">
+    <div class="w-full max-w-6xl mx-auto">
+      <div class="text-center mb-8 md:mb-16">
+        <h2 class="text-2xl md:text-4xl text-neutral-900 mb-4">Real Results for IT Leaders</h2>
+        <p class="text-base md:text-xl text-neutral-600 max-w-3xl mx-auto">
           See the tangible outcomes organizations achieve with Onepane AI for Azure Resilience.
         </p>
       </div>
       
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div id="result-1" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+      <div class="flex flex-col md:flex-row md:flex-wrap gap-6 md:gap-8">
+        <div id="result-1" class="flex-1 min-w-full md:min-w-[calc(33.333%-1rem)] bg-neutral-50 rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
           <div class="flex items-center mb-4">
-            <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
               <i class="fa-solid fa-check text-white"></i>
             </div>
-            <h3 class="text-xl text-neutral-900">Improved Governance</h3>
+            <h3 class="text-lg md:text-xl text-neutral-900">Improved Governance</h3>
           </div>
-          <p class="text-neutral-600 mb-4">
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Automated tagging, policy enforcement, and resource tracking help maintain control over your Azure environment.
           </p>
           <div class="pt-4 border-t border-neutral-100 text-neutral-700">
             <div class="flex items-center">
               <i class="fa-solid fa-arrow-trend-up text-neutral-800 mr-2"></i>
-              <span>85% reduction in policy violations</span>
+              <span class="text-sm md:text-base">85% reduction in policy violations</span>
             </div>
           </div>
         </div>
         
-        <div id="result-2" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div id="result-2" class="flex-1 min-w-full md:min-w-[calc(33.333%-1rem)] bg-neutral-50 rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
           <div class="flex items-center mb-4">
-            <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
               <i class="fa-solid fa-check text-white"></i>
             </div>
-            <h3 class="text-xl text-neutral-900">Efficient Resource Allocation</h3>
+            <h3 class="text-lg md:text-xl text-neutral-900">Efficient Resource Allocation</h3>
           </div>
-          <p class="text-neutral-600 mb-4">
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Granular cost visibility and workload optimization lead to better resource allocation and reduced waste.
           </p>
           <div class="pt-4 border-t border-neutral-100 text-neutral-700">
             <div class="flex items-center">
               <i class="fa-solid fa-arrow-trend-up text-neutral-800 mr-2"></i>
-              <span>23% average cost reduction</span>
+              <span class="text-sm md:text-base">23% average cost reduction</span>
             </div>
           </div>
         </div>
         
-        <div id="result-3" class="bg-neutral-50 rounded-xl p-6 shadow-sm border border-neutral-200">
+        <div id="result-3" class="flex-1 min-w-full md:min-w-[calc(33.333%-1rem)] bg-neutral-50 rounded-xl p-4 md:p-6 shadow-sm border border-neutral-200">
           <div class="flex items-center mb-4">
-            <div class="w-10 h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
+            <div class="w-8 h-8 md:w-10 md:h-10 bg-neutral-800 rounded-full flex items-center justify-center mr-3">
               <i class="fa-solid fa-check text-white"></i>
             </div>
-            <h3 class="text-xl text-neutral-900">Stable Configurations</h3>
+            <h3 class="text-lg md:text-xl text-neutral-900">Stable Configurations</h3>
           </div>
-          <p class="text-neutral-600 mb-4">
+          <p class="text-sm md:text-base text-neutral-600 mb-4">
             Tier-based DR and HA validation ensure appropriate resilience strategies are in place for critical workloads.
           </p>
           <div class="pt-4 border-t border-neutral-100 text-neutral-700">
             <div class="flex items-center">
               <i class="fa-solid fa-arrow-trend-up text-neutral-800 mr-2"></i>
-              <span>99.99% availability for critical systems</span>
+              <span class="text-sm md:text-base">99.99% availability for critical systems</span>
             </div>
           </div>
         </div>
